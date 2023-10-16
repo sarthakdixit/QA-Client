@@ -12,10 +12,10 @@ import { LogLevel } from "@azure/msal-browser";
  */
 export const msalConfig = {
   auth: {
-    clientId: "b1ae73e8-ae99-4d80-b239-f0d065f774cc", // This is the ONLY mandatory field that you need to supply.
+    clientId: {CLIENT_ID}, // This is the ONLY mandatory field that you need to supply.
     authority:
-      "https://login.microsoftonline.com/a195aa85-cb6e-48db-8c58-9c51fb7c2517", // Replace the placeholder with your tenant subdomain
-    redirectUri: "http://localhost:3000", // You must register this URI on Azure Portal/App Registration. Defaults to window.location.origin
+      "https://login.microsoftonline.com/{TENANT_ID}", // Replace the placeholder with your tenant subdomain
+    redirectUri: {REDIRECT_URL}, // You must register this URI on Azure Portal/App Registration. Defaults to window.location.origin
     postLogoutRedirectUri: "/", // Indicates the page to navigate after logout.
   },
   cache: {
@@ -58,9 +58,9 @@ export const msalConfig = {
  * https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/resources-and-scopes.md
  */
 
-const tenantId = "0a6cefc6-8eda-4567-b5c8-18d6613b6779";
+const tenantId = {WEB_API_CLIENT_ID};
 const baseApi = `api://${tenantId}`;
-const baseUrl = "https://localhost:44300";
+const baseUrl = {WEB_API_URL};
 
 export const protectedResources = {
   QAListAPI: {
