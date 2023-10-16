@@ -84,6 +84,13 @@ export const protectedResources = {
       ],
     },
   },
+  AnswerAPI: {
+    endpoint: `${baseUrl}/api/Answer`,
+    scopes: {
+      read: [`${baseApi}/Answer.Read.All`],
+      write: [`${baseApi}/Answer.Post`],
+    },
+  },
   TagAPI: {
     endpoint: `${baseUrl}/api/Tag`,
     scopes: {

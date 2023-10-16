@@ -11,6 +11,7 @@ import { LoadingProvider } from "./contexts/LoadingContext";
 import Create from "./pages/Create";
 import MyItems from "./pages/MyItems";
 import Edit from "./pages/Edit";
+import Details from "./pages/Details";
 
 function App({ instance }) {
   return (
@@ -36,6 +37,7 @@ function App({ instance }) {
             />
             <Route path="/home" element={<Default />}>
               <Route index element={<Home />} />
+              <Route path="details" element={<Details />} />
               <Route path="create" element={<Create />} />
               <Route path="edit" element={<Edit />} />
               <Route path="my-items" element={<MyItems />} />
